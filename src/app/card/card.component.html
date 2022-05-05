@@ -1,0 +1,25 @@
+<div class="contenedor">
+  <div class="card">
+    <div class="card-header">
+        
+        <h1 class="text-center">Calcular numeros primos</h1>
+        
+    </div>
+    <div class="card-body">
+      <label class="d-flex justify-content-center" for="">Ingresa el valor para obtener numeros primos</label>
+      <input class="form-control" type="text" class="form-control" (input)="inputValue($event)" />
+
+      <div class="d-flex justify-content-center mt-3">
+        <button class="btn btn-primary" (click)="calcularMultiplos()">Calcular multiplos</button>
+
+      </div>
+
+      
+    </div>
+    <div class="card-footer">
+        <div *ngFor="let vp of valoresPrimos; let i = index">
+            <p class="text-center" [style.color]="vp.color">{{ vp.numero }}</p>
+          </div>
+    </div>
+  </div>
+</div>
